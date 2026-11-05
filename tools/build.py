@@ -30,6 +30,9 @@ ICON_MAP = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" strok
 ICON_PHONE = ('<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="3" '
               'fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" '
               'stroke-linecap="round" d="M10.5 18.5h3"/></svg>')
+ICON_BATTERY = ('<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="7" width="17" height="10" rx="2.5" '
+                'fill="none" stroke="currentColor" stroke-width="2"/><rect x="20.5" y="10" width="2" height="4" rx="1" '
+                'fill="currentColor"/><rect x="5" y="9.5" width="9" height="5" rx="1.2" fill="currentColor"/></svg>')
 ICON_CLOCK = ('<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" '
               'stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" '
               'stroke-linecap="round" d="M12 7v5l3 2"/></svg>')
@@ -68,11 +71,15 @@ def route_svg(t):
     <circle class="r-m1" r="18"/>
     <text class="r-num" y="6" text-anchor="middle">1</text>
   </g>
-  <text class="r-text-strong" x="635" y="44" text-anchor="middle">300 kW</text>
+  <text class="r-text-strong" x="612" y="44" text-anchor="middle">300 kW</text>
 
   <g transform="translate(700 80)">
-    <rect class="r-flag" x="-2" y="-44" width="4" height="44" rx="2"/>
-    <path class="r-flag" d="M2 -44 h24 l-6 8 6 8 h-24 z"/>
+    <rect class="r-flag" x="-2" y="-22" width="4" height="22" rx="2"/>
+    <g transform="translate(-25 -52)">
+      <rect class="r-batt" x="0" y="0" width="44" height="26" rx="6"/>
+      <rect class="r-flag" x="46.5" y="8" width="4.5" height="10" rx="2"/>
+      <rect class="r-flag" x="5" y="5" width="9" height="16" rx="2.5"/>
+    </g>
   </g>
   <text class="r-text r-sm-hide" x="735" y="44" text-anchor="start">{t['svg_limit']}</text>
 
@@ -329,7 +336,7 @@ def landing(t):
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">{t['eyebrow']}</span>
+      <span class="eyebrow">{ICON_BATTERY}{t['eyebrow']}</span>
       <h1>{t['h1']}</h1>
       <p class="lead">{t['lead']}</p>
       <div class="cta-row">

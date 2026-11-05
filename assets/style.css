@@ -91,6 +91,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   color: var(--accent); background: rgba(60, 240, 138, .08);
   border: 1px solid rgba(60, 240, 138, .25); padding: 6px 12px; border-radius: 999px;
 }
+.eyebrow svg { width: 20px; height: 20px; flex: none; }
 h1 { font-size: clamp(42px, 6.4vw, 74px); line-height: 1.02; letter-spacing: -.038em; margin: 22px 0 20px; font-weight: 850; }
 .glow {
   background: linear-gradient(92deg, var(--accent) 10%, var(--accent-2) 90%);
@@ -137,6 +138,7 @@ h2 { font-size: clamp(32px, 4.2vw, 48px); line-height: 1.07; letter-spacing: -.0
 .r-m1 { fill: var(--accent); }
 .r-m2 { fill: var(--second); }
 .r-flag { fill: var(--danger); }
+.r-batt { fill: var(--card); stroke: var(--danger); stroke-width: 3; }
 .r-dot { fill: var(--text); }
 .r-ring { fill: none; stroke: rgba(60, 240, 138, .35); stroke-width: 2; }
 @media (max-width: 640px) {
